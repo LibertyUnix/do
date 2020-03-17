@@ -4,7 +4,7 @@
 #cat ssh.json and note the ID for SSH-ID
 
 provider "digitalocean" {
-  token = "APIKEY"
+  token = "APITOKEN"
 }
 resource "digitalocean_droplet" "web" {
   name     = "tf-TEST-1"
