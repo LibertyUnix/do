@@ -11,7 +11,7 @@ add-apt-repository universe
 sleep 5
 apt-get -y update
 sleep 30
-apt-get upgrade -yq
+apt-get -y upgrade 
 sleep 30
 apt-get -y dist-upgrade
 sleep 30
