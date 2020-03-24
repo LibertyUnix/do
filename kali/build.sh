@@ -17,4 +17,4 @@ apt-get install -y expect
 useradd libertyunix -p password
 usermod -aG admin libertyunix 
 usermod -aG sudo libertyunix
-bash /root/gui.sh
+yes | bash /root/gui.sh
