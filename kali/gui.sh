@@ -2,7 +2,7 @@ export DEBIAN_FRONTEND=noninteractive
 #install XFCE
 echo "install xfce"
 export DEBIAN_FRONTEND=noninteractive
-yes | apt-get install -y kali-full kali-root-login desktop-base xfce4 xfce4-places-plugin xfce4-goodies kali-linux-top10
+yes | apt-get install -y kali-linux-full kali-root-login desktop-base xfce4 xfce4-places-plugin xfce4-goodies
 
 echo "vncserver check"
 #vncserver check
