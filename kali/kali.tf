@@ -6,15 +6,18 @@
 provider "digitalocean" {
   token = "APITOKEN"
 }
-resource "digitalocean_droplet" "web" {
-  name     = "tf-TEST-1"
+resource "digitalocean_droplet" "kali-gui" {
+  name     = "kali-gui"
   image    = "ubuntu-18-04-x64"
   region   = "nyc3"
   size     = "512mb"
   ssh_keys = [SSH-ID]
   provisioner "remote-exec" {
     inline = [
-      "wget https://raw.githubusercontent.com/LibertyUnix/do/master/build.sh",
+      "wget https://raw.githubusercontent.com/LibertyUnix/do/master/kali/build.sh",
+      "wget -P /root https://raw.githubusercontent.com/LibertyUnix/do/master/kali/gui.sh",
+      "chmod +x build.sh",
+      "chmod +x /root/gui.sh",
       "chmod +x build.sh",
       "./build.sh",
     ]
