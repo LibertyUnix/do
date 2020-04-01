@@ -1,0 +1,42 @@
+{
+    "builders": [
+      {
+        "type": "digitalocean",
+        "ssh_username": "root",
+        "api_token": "APITOPKEN",
+        "image": "ubuntu-16-04-x64",
+        "region": "nyc1",
+        "size": "s-1vcpu-2gb"
+      }],
+  "provisioners": [
+    {
+      "type": "chef-solo",
+      "version": "13.8.5",
+      "cookbook_paths": [
+        "{{template_dir}}/cookbooks"
+      ],
+      "run_list": [
+        "apt::default",
+        "metasploitable::users",
+        "metasploitable::mysql",
+        "metasploitable::apache_continuum",
+        "metasploitable::apache",
+        "metasploitable::php_545",
+        "metasploitable::phpmyadmin",
+        "metasploitable::proftpd",
+        "metasploitable::docker",
+        "metasploitable::samba",
+        "metasploitable::sinatra",
+        "metasploitable::unrealircd",
+        "metasploitable::chatbot",
+        "metasploitable::payroll_app",
+        "metasploitable::readme_app",
+        "metasploitable::cups",
+        "metasploitable::drupal",
+        "metasploitable::knockd",
+        "metasploitable::iptables",
+        "metasploitable::flags"
+      ]
+    }
+  ]
+}
